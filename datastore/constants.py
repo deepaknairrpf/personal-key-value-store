@@ -1,0 +1,4 @@
+STORAGE_DIR = 'storage'
+KEY_SIZE = 32
+VALUE_SIZE = 16 * 1000
+TIME_FORMAT = '%Y-%m-%d-%H-%M-%S'
