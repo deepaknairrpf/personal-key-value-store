@@ -21,13 +21,13 @@ each API call gets delegated to the corresponding API call of a
 
 `FileMeta` objects maintains predominantly three datastructures:  
 
-    1. The key-seek pos `dict` which maps the seek positions of all 
+    1. The key-seek pos dict which maps the seek positions of all 
     the keys to the corresponding value objects. 
-    This enables the `DataStore` to easily read the value object from
+    This enables the DataStore to easily read the value object from
     the corresponding seek position.
 
-    2. A free slot list which consists of discontinuos slots 
-    present in the value store as a result of deletion.
+    2. A free slot list which consists of discontinuous slots 
+    present in the value store as a result of deletions.
     
     3. A min-heap which consists of expiry times of all keys whose TTL
     was specified during creation.
@@ -57,7 +57,7 @@ keys with expired TTLs.
     5. Reads are optimized to be as fast as possible with minimal
     memory footprint. But, updates and deletes incur O(n) to rebuild the heap
     and create incurs O(log n) to set right the heap. Therefore, it's assumed 
-    to be a read heavy usecase with rare updates and deletes.
+    to be a read heavy use-case with rare updates and deletes.
 
 ## Validations
     1. Keys are less than or equal to 32 chars.
