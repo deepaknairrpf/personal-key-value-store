@@ -355,7 +355,7 @@ class DataStore:
         Note that, this method is considered private.
         '''
         errors = []
-        key_validation = True if utils.utf8len(key) < 32 else False
+        key_validation = True if utils.utf8len(key) <= 32 else False
         value_validation = True if utils.utf8len(json.dumps(value)) < constants.VALUE_SIZE else False
         file_validation = True if seek_pos <= constants.MAX_FILE_SIZE - constants.VALUE_SIZE else False
 
