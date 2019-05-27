@@ -1,4 +1,5 @@
 STORAGE_DIR = 'storage'
 KEY_SIZE = 32
 VALUE_SIZE = 16 * 1000
+MAX_FILE_SIZE = 1 * 1000 * 1000 * 1000
 TIME_FORMAT = '%Y-%m-%d-%H-%M-%S'
